@@ -1,0 +1,25 @@
+/*
+
+core > typography
+
+*/
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: $body-font;
+  font-size: 1.3rem;
+  line-height: 1.615;
+}
+p {
+
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: $heading-font;
+  font-weight: bold;
+}
+a {
+  color: $link-colour;
+  text-decoration: none;
+}

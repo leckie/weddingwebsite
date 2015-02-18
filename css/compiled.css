@@ -65,15 +65,104 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*
+
+core > variables
+
+*/
+/*
+
+core > typography
+
+*/
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.615; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Amatic SC", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold; }
+
+a {
+  color: #684f3e;
+  text-decoration: none; }
+
+/*
+
+core > layout
+
+*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html {
   height: 100%;
   min-height: 100%; }
 
 body {
+  background: url(../images/wood.jpg) repeat top center transparent;
+  background-size: 400px;
   height: 100%; }
 
 .homepage-intro {
-  background: #eaeaea;
-  height: 100%; }
+  background: url(../images/backdrops/woods.jpg) no-repeat bottom center;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  text-align: center; }
+  .homepage-intro:after {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent); }
+  .homepage-intro .intro-image {
+    position: relative;
+    width: 80%;
+    margin-top: 50px;
+    max-width: 350px;
+    z-index: 5; }
+
+.navigation-wrap {
+  background: #e9e5e4;
+  background-size: 150px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  font-family: "Amatic SC", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 1.2rem; }
+  .navigation-wrap .navigation {
+    background: url(../images/hessian.png) repeat top center transparent;
+    background-size: 150px;
+    border: 1px dashed #b8b7b5;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .navigation-wrap .navigation > li {
+      text-align: center;
+      -webkit-flex-grow: 1;
+      -moz-flex-grow: 1;
+      flex-grow: 1;
+      -ms-flex-positive: 1; }
+    .navigation-wrap .navigation a {
+      display: block;
+      padding: 1.2rem 0; }
+      .navigation-wrap .navigation a:hover {
+        background: rgba(0, 0, 0, 0.02); }
 
 /*# sourceMappingURL=compiled.css.map */
