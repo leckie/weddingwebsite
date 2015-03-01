@@ -18,8 +18,51 @@ body {
   background-size: 400px;
   height: 100%;
 }
+.content-wrap {
+  margin: 0 auto;
+  max-width: 1060px;
+  padding: $m-outer;
+}
+@media screen and (min-width: $break-regular)  {
+  .content-wrap {
+    padding: $d-outer;
+  }
+}
+.paper-box {
+  background: url(../images/hessian.png) repeat top center transparent;
+  background-size: 240px;
+  border: 1px solid $dark-border-colour;
+  border-bottom: darken($dark-border-colour, 8%);
+  box-shadow: 0px 0px 4px rgba(0,0,0,.25), 0 10px 6px -6px rgba(0,0,0,.25);
+  border-radius: 2px;
+  margin-bottom: $m-outer;
+  padding: $m-inner;
+}
+@media screen and (min-width: $break-regular)  {
+  .paper-box {
+    margin-bottom: $d-outer;
+    padding: $d-inner;
+  }
+}
+@media screen and (min-width: $break-regular)  {
+  .flex-wrap {
+    @include display(flex);
+  }
+  .left-col {
+    padding-right: 1.5rem;
+    width: 50%;
+  }
+  .right-col {
+    padding-left: 1.5rem;
+    width: 50%;
+  }
+}
+
+
+
 .homepage-intro {
   background: url(../images/backdrops/beach.jpg) no-repeat right bottom / cover transparent;
+  box-shadow: 0 1px 4px rgba(0,0,0,.8);
   height: 100%;
   position: relative;
   text-align: center;
@@ -35,9 +78,14 @@ body {
   .intro-image {
     position: relative;
     width: 80%;
-    margin-top: 50px;
+    margin-top: 90px;
     max-width: 450px;
     z-index: 5;
+  }
+  @media screen and (min-width: $break-regular)  {
+    .intro-image {
+      margin-top: 50px;
+    }
   }
   .arrow {
     background: url(../images/homepage/arrow.svg) no-repeat center center transparent;
@@ -46,6 +94,11 @@ body {
     position: absolute;
     width: 100%;
     @include animation(bounce 2s infinite);
+  }
+}
+@media screen and (min-width: $break-regular)  {
+  .homepage-intro {
+    box-shadow: none;
   }
 }
 .navigation-wrap {
@@ -57,10 +110,23 @@ body {
   font-size: $beta;
   font-weight: bold;
   padding: 1.2rem;
+  &.navigation-open {
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 500;
+    .navigation {
+      height: 100%;
+      @include flex-direction(column);
+    }
+  }
   .navigation {
     background: url(../images/hessian.png) repeat top center transparent;
     background-size: 150px;
-    border: 1px dashed #b8b7b5;
+    border: 1px dashed $border-colour;
     box-shadow: 0 1px 2px rgba(0,0,0,0.08);
     @include display(flex);
     >li {
@@ -99,13 +165,48 @@ body {
   background: url(../images/hessian.png) repeat scroll center top / 150px auto transparent;
   box-shadow: 0 1px 2px rgba(0,0,0,0.08);
   left: 0;
+  padding: 1rem;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 100;
+  .mobile-nav-trigger {
+    background: url(../images/navigation/nav-trigger.svg) no-repeat center center transparent;
+    float: left;
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+  .mobile-rsvp {
+    font-family: $heading-font;
+    float: right;
+    font-size: $beta;
+    font-weight: bold;
+    line-height: 2.4rem;
+  }
 }
 @media screen and (min-width: $break-regular)  {
   .mobile-nav {
     display: none;
+  }
+}
+
+// Homepage only
+
+.inside-border {
+  border: 2px solid $border-colour;
+  border-radius: 2px;
+}
+.venue-details {
+  padding-top: 5.5rem;
+  text-align: center;
+  .barn {
+    background: url(../images/homepage/barn.svg) no-repeat center center transparent;
+    height: 65px;
+    margin: -44px auto 0 auto;
+    width: 108px;
+  }
+  .time-title {
+    font-size: $alpha;
+    margin-top: 1rem;
   }
 }

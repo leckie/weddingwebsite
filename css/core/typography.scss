@@ -8,6 +8,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  color: $text-colour;
   font-family: $body-font;
   font-size: 1.3rem;
   line-height: 1.615;
@@ -16,8 +17,21 @@ p {
 
 }
 h1,h2,h3,h4,h5,h6 {
+  color: $heading-colour;
   font-family: $heading-font;
   font-weight: bold;
+}
+h1 {
+  font-size: $alpha;
+}
+h2 {
+  font-size: $beta;
+}
+h3 {
+  font-size: $gamma;
+}
+h4 {
+  font-size: $delta;
 }
 a {
   color: $link-colour;

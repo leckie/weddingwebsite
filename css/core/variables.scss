@@ -6,7 +6,11 @@ core > variables
 
 // Colours:
 
+$text-colour: #684f3e;
+$heading-colour: #684f3e;
 $link-colour: #684f3e;
+$border-colour: #b8b7b5;
+$dark-border-colour: #a09691;
 
 // Fonts:
 
@@ -23,6 +27,13 @@ $epsilon: 1.3rem;
 $zeta: 1.1rem;
 
 $giga: 4.8rem;
+
+// Spacing:
+
+$d-outer: 3rem;
+$m-outer: 1.5rem;
+$d-inner: 2rem;
+$m-inner: 1rem;
 
 // Responsive breakpoints:
 
