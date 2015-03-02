@@ -14,7 +14,7 @@ html {
   min-height: 100%;
 }
 body {
-  background: url(../images/wood.jpg) repeat top center transparent;
+  background: url(../images/wood.jpg) repeat top left transparent;
   background-size: 400px;
   height: 100%;
 }
@@ -22,6 +22,10 @@ body {
   margin: 0 auto;
   max-width: 1060px;
   padding: $m-outer;
+}
+.vertical-flex {
+  @include display(flex);
+  @include flex-direction(column);
 }
 @media screen and (min-width: $break-regular)  {
   .content-wrap {
@@ -31,17 +35,91 @@ body {
 .paper-box {
   background: url(../images/hessian.png) repeat top center transparent;
   background-size: 240px;
-  border: 1px solid $dark-border-colour;
-  border-bottom: darken($dark-border-colour, 8%);
   box-shadow: 0px 0px 4px rgba(0,0,0,.25), 0 10px 6px -6px rgba(0,0,0,.25);
   border-radius: 2px;
   margin-bottom: $m-outer;
   padding: $m-inner;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  z-index: 1;
+  &.stacked {
+    box-shadow: 0px 0px 4px rgba(0,0,0,.25), 0 14px 6px -6px rgba(0,0,0,.25);
+  }
+  &.stacked:before {
+    background: url(../images/hessian.png) repeat top center transparent;
+    background-size: 240px;
+    bottom: -.3rem;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.25), 0 10px 6px -6px rgba(0,0,0,.25);
+    content: "";
+    height: .3rem;
+    left: .5rem;
+    position: absolute;
+    right: .5rem;
+    z-index: 0;
+  }
 }
 @media screen and (min-width: $break-regular)  {
   .paper-box {
     margin-bottom: $d-outer;
     padding: $d-inner;
+    &.small-padding {
+      padding: $m-inner;
+    }
+  }
+}
+.picture-box {
+  background: url(../images/hessian.png) repeat top center transparent;
+  background-size: 240px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,.25), 0 10px 6px -6px rgba(0,0,0,.25);
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+  padding: $m-inner;
+  position: relative;
+  &:before,
+  &:after {
+    background: url(../images/rope.png) no-repeat center center / 15px transparent;
+    bottom: -25px;
+    content: "";
+    height: 25px;
+    position: absolute;
+    width: 15px;
+  }
+  &:before {
+    left: 2.5rem;
+  }
+  &:after {
+    right: 2.5rem;
+  }
+  img {
+    border-radius: 2px;
+    display: block;
+    width: 100%;
+  }
+  .tape {
+    height: 43px;
+    position: absolute;
+    width: 41px;
+    &.top-left {
+      background: url(../images/frame/top-left.svg) repeat top center transparent;
+      left: .8rem;
+      top: .8rem;
+    }
+    &.top-right {
+      background: url(../images/frame/top-right.svg) repeat top center transparent;
+      right: .8rem;
+      top: .8rem;
+    }
+    &.bottom-right {
+      background: url(../images/frame/bottom-right.svg) repeat top center transparent;
+      bottom: .8rem;
+      right: .8rem;
+    }
+    &.bottom-left {
+      background: url(../images/frame/bottom-left.svg) repeat top center transparent;
+      bottom: .8rem;
+      left: .8rem;
+    }
   }
 }
 @media screen and (min-width: $break-regular)  {
@@ -50,16 +128,15 @@ body {
   }
   .left-col {
     padding-right: 1.5rem;
+    position: relative;
     width: 50%;
   }
   .right-col {
     padding-left: 1.5rem;
+    position: relative;
     width: 50%;
   }
 }
-
-
-
 .homepage-intro {
   background: url(../images/backdrops/beach.jpg) no-repeat right bottom / cover transparent;
   box-shadow: 0 1px 4px rgba(0,0,0,.8);
@@ -90,9 +167,11 @@ body {
   .arrow {
     background: url(../images/homepage/arrow.svg) no-repeat center center transparent;
     bottom: 50px;
+    display: block;
     height: 20px;
     position: absolute;
     width: 100%;
+    z-index: 100;
     @include animation(bounce 2s infinite);
   }
 }
@@ -189,6 +268,11 @@ body {
     display: none;
   }
 }
+.footer {
+  background: url(../images/footer.svg) no-repeat center center transparent;
+  height: 22px;
+  margin-bottom: $m-outer;
+}
 
 // Homepage only
 
@@ -197,7 +281,7 @@ body {
   border-radius: 2px;
 }
 .venue-details {
-  padding-top: 5.5rem;
+  padding-top: 5.3rem;
   text-align: center;
   .barn {
     background: url(../images/homepage/barn.svg) no-repeat center center transparent;
@@ -205,8 +289,28 @@ body {
     margin: -44px auto 0 auto;
     width: 108px;
   }
-  .time-title {
+  .date-title {
     font-size: $alpha;
-    margin-top: 1rem;
+    margin-top: 1.8rem;
+  }
+  .time-title {
+    font-size: $gamma;
+    margin-top: .5rem;
+  }
+  .location-title {
+    margin-bottom: 3rem;
+  }
+  .splitter {
+    background: url(../images/homepage/splitter.svg) no-repeat center center transparent;
+    display: block;
+    height: .7rem;
+    margin: 1.5rem 0;
+  }
+}
+@media screen and (min-width: $break-regular)  {
+  .engrave {
+    background: url(../images/homepage/engrave.svg) no-repeat center center transparent;
+    margin-bottom: $d-outer;
+    @include flex(1);
   }
 }
