@@ -1,0 +1,43 @@
+/*
+
+core > variables
+
+*/
+
+// Colours:
+
+$text-colour: #887d6f;
+$heading-colour: #684f3e;
+$link-colour: #684f3e;
+$border-colour: #b8b7b5;
+$dark-border-colour: #a09691;
+$paper-colour: #F2F1EF;
+
+// Fonts:
+
+$body-font: "proxima-nova-soft", Helvetica, Arial, sans-serif;
+$heading-font: "Amatic SC", Helvetica Neue, Helvetica, Arial, sans-serif;
+
+// Font sizes:
+
+$alpha: 3rem;
+$beta: 2.4rem;
+$gamma: 1.8rem;
+$delta: 1.4rem;
+$epsilon: 1.3rem;
+$zeta: 1.1rem;
+
+$giga: 4.8rem;
+
+// Spacing:
+
+$d-outer: 3rem;
+$m-outer: 1.5rem;
+$d-inner: 2rem;
+$m-inner: 1.5rem;
+
+// Responsive breakpoints:
+
+$break-small: 599px;
+$break-regular: 770px;
+$break-large: 1024px;
