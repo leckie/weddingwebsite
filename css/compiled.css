@@ -248,6 +248,8 @@ body {
     position: absolute;
     right: .5rem;
     z-index: 0; }
+  .paper-box.align-left {
+    text-align: left; }
 
 @media screen and (min-width: 770px) {
   .paper-box {
@@ -261,22 +263,47 @@ body {
   border-radius: 2px;
   margin-bottom: 2.5rem;
   padding: 1.5rem;
-  position: relative; }
-  .picture-box:before, .picture-box:after {
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0, 1.3);
+  -moz-transition: all 0.4s cubic-bezier(0.3, 0, 0, 1.3);
+  transition: all 0.4s cubic-bezier(0.3, 0, 0, 1.3); }
+  .picture-box.w-rope:before, .picture-box.w-rope:after {
     background: url(../images/rope.png) no-repeat center center/15px transparent;
     bottom: -25px;
     content: "";
     height: 25px;
     position: absolute;
     width: 15px; }
-  .picture-box:before {
+  .picture-box.w-rope:before {
     left: 2.5rem; }
-  .picture-box:after {
+  .picture-box.w-rope:after {
     right: 2.5rem; }
   .picture-box img {
     border-radius: 2px;
     display: block;
     width: 100%; }
+  .picture-box.zoom-hover:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0 20px 6px -10px rgba(0, 0, 0, 0.25);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03); }
   .picture-box .tape {
     height: 43px;
     position: absolute;
@@ -598,5 +625,10 @@ body {
     .wedding-party .party-member {
       padding: 0 1.5rem;
       width: 33.33333333333333%; } }
+.venue-info-box {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1; }
 
 /*# sourceMappingURL=compiled.css.map */
