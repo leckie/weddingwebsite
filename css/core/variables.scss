@@ -8,6 +8,7 @@ core > variables
 
 $text-colour: #887d6f;
 $heading-colour: #684f3e;
+$dark-heading-colour: darken($heading-colour, 10%);
 $link-colour: #684f3e;
 $border-colour: #b8b7b5;
 $dark-border-colour: #a09691;
