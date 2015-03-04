@@ -8,7 +8,9 @@ core > variables
 
 $text-colour: #887d6f;
 $heading-colour: #684f3e;
-$link-colour: #684f3e;
+$dark-heading-colour: darken($heading-colour, 10%);
+$link-colour: #8462a3;
+$purple-colour: #8462a3;
 $border-colour: #b8b7b5;
 $dark-border-colour: #a09691;
 $paper-colour: #F2F1EF;
@@ -41,3 +43,9 @@ $m-inner: 1.5rem;
 $break-small: 599px;
 $break-regular: 770px;
 $break-large: 1024px;
+
+// Transitions
+
+@mixin transition-bounce($timing: .4s) {
+  @include transition (all $timing cubic-bezier(.3, 0, 0, 1.3));
+}

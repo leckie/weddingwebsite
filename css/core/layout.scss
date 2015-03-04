@@ -12,6 +12,9 @@ core > layout
 html {
   height: 100%;
   min-height: 100%;
+  &.navigation-open {
+    overflow: hidden;
+  }
 }
 body {
   background: url(../images/wood.jpg) repeat top left transparent;
@@ -136,9 +139,9 @@ body {
     width: 50%;
   }
 }
-.homepage-intro {
+.intro-image-wrap {
   background: url(../images/backdrops/beach.jpg) no-repeat right bottom / cover transparent;
-  box-shadow: 0 1px 4px rgba(0,0,0,.8);
+  box-shadow: inset 0px -1px 4px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255,255,255,0.5);
   height: 100%;
   position: relative;
   text-align: center;
@@ -173,9 +176,24 @@ body {
     z-index: 100;
     @include animation(bounce 2s infinite);
   }
+  &.sub-page {
+    height: auto;
+    .intro-image {
+      margin: 7rem 0 18rem;
+      max-width: 350px;
+    }
+    .arrow {
+      display: none;
+    }
+  }
+  @media screen and (min-width: $break-regular)  {
+    &.sub-page .intro-image {
+      margin-top: 5rem;
+    }
+  }
 }
 @media screen and (min-width: $break-regular)  {
-  .homepage-intro {
+  .intro-image-wrap {
     box-shadow: none;
   }
 }
@@ -188,19 +206,7 @@ body {
   font-size: $beta;
   font-weight: bold;
   padding: 1.2rem;
-  &.navigation-open {
-    bottom: 0;
-    display: block;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 500;
-    .navigation {
-      height: 100%;
-      @include flex-direction(column);
-    }
-  }
+  position: relative;
   .navigation {
     background: url(../images/hessian.png) repeat top center transparent;
     background-size: 150px;
@@ -233,21 +239,27 @@ body {
       }
     }
   }
+  &.sub-page {
+    margin: -4.4rem 3rem 0 3rem;
+  }
 }
 @media screen and (min-width: $break-regular)  {
   .navigation-wrap {
     display: block;
   }
 }
-.mobile-nav {
+.mobile-nav-bar {
   background: url(../images/hessian.png) repeat scroll center top / 150px auto transparent;
   box-shadow: 0 1px 2px rgba(0,0,0,0.08);
   left: 0;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 100;
+  &.navigation-open {
+    display: none;
+  }
   .mobile-nav-trigger {
     background: url(../images/navigation/nav-trigger.svg) no-repeat center center transparent;
     float: left;
@@ -262,8 +274,57 @@ body {
     line-height: 2.4rem;
   }
 }
+.mobile-navigation-wrap {
+  @include background-image(url("../images/navigation/heading.svg"), url("../images/hessian.png"));
+  background-position: center 2rem, center;
+  background-repeat: no-repeat, repeat;
+  background-size: 90%, 200px;
+  border-radius: 2px;
+  bottom: 1.5rem;
+  box-shadow: 0 0 0 10rem rgba(0,0,0,.5);
+  left: 1.5rem;
+  opacity: 0;
+  overflow: hidden;
+  padding: 2rem;
+  pointer-events: none;
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+  z-index: 9999;
+  @include transform(scale(.9));
+  @include transform-origin(center center);
+  @include transition-bounce;
+  &.navigation-open {
+    opacity: 1;
+    pointer-events: all;
+    @include transform(scale(1));
+  }
+  .close-bar {
+    display: none;
+    padding-right: 2rem;
+  }
+  .navigation {
+    font-size: $beta;
+    font-weight: bold;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    -webkit-overflow-scrolling: touch;
+    @include transform(translateY(-50%));
+    a {
+      color: $purple-colour;
+      display: block;
+      font-family: $heading-font;
+      padding: .5rem 0;
+    }
+  }
+}
 @media screen and (min-width: $break-regular)  {
-  .mobile-nav {
+  .mobile-nav-bar,
+  .mobile-navigation-wrap {
     display: none;
   }
 }
@@ -271,6 +332,56 @@ body {
   background: url(../images/footer.svg) no-repeat center center transparent;
   height: 22px;
   margin-bottom: $m-outer;
+}
+
+// Subpage specific
+
+.sub-page-title {
+  color: #fff;
+  font-size: $giga;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  margin-bottom: .5rem;
+  .inner {
+    position: relative;
+    &:before {
+      background: url(../images/headings/white-leaf-left.svg) no-repeat center center transparent;
+      content: "";
+      height: 11px;
+      left: -30px;
+      margin-top: -6px;
+      position: absolute;
+      top: 50%;
+      width: 24px;
+    }
+    &:after {
+      background: url(../images/headings/white-leaf-right.svg) no-repeat center center transparent;
+      content: "";
+      height: 10px;
+      margin-top: -5px;
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      width: 24px;
+    }
+  }
+}
+.sub-page-description {
+  color: #fff;
+  font-size: $gamma;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: $break-regular)  {
+  .sub-page-title {
+    text-shadow: 0px -1px 2px rgba(0,0,0,0.5), 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .sub-page-description {
+    margin-bottom: 3rem;
+    text-shadow: 0px -1px 1px rgba(0,0,0,0.5), 0 2px 3px rgba(0,0,0,0.5);
+  }
 }
 
 // Homepage only
@@ -311,5 +422,17 @@ body {
     background: url(../images/homepage/engrave.svg) no-repeat center center transparent;
     margin-bottom: $d-outer;
     @include flex(1);
+  }
+}
+
+// Wedding party only
+
+@media screen and (min-width: $break-regular)  {
+  .wedding-party {
+    max-width: 1560px;
+    .party-member {
+      padding: 0 1.5rem;
+      width: 33.33333333333333%;
+    }
   }
 }
