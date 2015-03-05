@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/compiled.css">
     <script src="//use.typekit.net/nud8ptj.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
   </head>
   <body>
     <!-- Mobile only -->
@@ -74,12 +76,16 @@
       </h1>
       <p class="sub-page-description">Location is everything, that's why we've chosen a converted byre!</p>
       <div class="venue-map">
-        <div class="picture-box zoom-hover">
-          <div class="tape top-left"></div>
+        <div class="picture-box">
           <div class="tape top-right"></div>
           <div class="tape bottom-right"></div>
           <div class="tape bottom-left"></div>
-          <a href="https://www.google.co.uk/maps/place/Kinkell+Byre/@56.32386,-2.754402,17z/data=!3m1!4b1!4m2!3m1!1s0x4886f870a589a359:0x31e456e6a39d324?hl=en" target="_blank"><img src="images/the-venue/map.jpg" /></a>
+          <div id='map'></div>
+          <script>
+            L.mapbox.accessToken = 'pk.eyJ1IjoiY2hyaXNsZWNraWUiLCJhIjoiSU1kaW43ayJ9.JaVLqgStWylyUIzgL-gkxg';
+            var map = L.mapbox.map('map', 'chrisleckie.lchfne9h')
+                .setView([56.3320756346906, -2.75447845458984], 13);
+          </script>
         </div>
       </div>
       <div class="flex-wrap">

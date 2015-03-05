@@ -300,6 +300,10 @@ body {
     border-radius: 2px;
     display: block;
     width: 100%; }
+  .picture-box #map {
+    border-radius: 2px;
+    height: 500px;
+    width: 100%; }
   .picture-box.zoom-hover:hover {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0 20px 6px -10px rgba(0, 0, 0, 0.25);
     -webkit-transform: scale(1.03);
@@ -310,7 +314,8 @@ body {
   .picture-box .tape {
     height: 43px;
     position: absolute;
-    width: 41px; }
+    width: 41px;
+    z-index: 2; }
     .picture-box .tape.top-left {
       background: url(../images/frame/top-left.svg) repeat top center transparent;
       left: .8rem;
@@ -639,5 +644,8 @@ body {
   -moz-flex-grow: 1;
   flex-grow: 1;
   -ms-flex-positive: 1; }
+
+.leaflet-control-attribution {
+  display: none; }
 
 /*# sourceMappingURL=compiled.css.map */
