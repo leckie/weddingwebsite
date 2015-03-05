@@ -317,9 +317,12 @@ body {
     pointer-events: all;
     @include transform(scale(1));
   }
-  .close-bar {
-    display: none;
-    padding-right: 2rem;
+  .close-mobile-navigation {
+    background: url(../images/navigation/close.svg) no-repeat center center transparent;
+    display: block;
+    height: 18px;
+    text-indent: -9999px;
+    width: 18px;
   }
   .navigation {
     font-size: $beta;
