@@ -283,11 +283,13 @@ body {
     width: 2.4rem;
   }
   .mobile-rsvp {
+    background: url(../images/navigation/arrow.svg) no-repeat right center transparent;
     font-family: $heading-font;
     float: right;
     font-size: $beta;
     font-weight: bold;
     line-height: 2.4rem;
+    padding-right: 2rem;
   }
 }
 .mobile-navigation-wrap {

@@ -465,11 +465,13 @@ body {
     height: 2.4rem;
     width: 2.4rem; }
   .mobile-nav-bar .mobile-rsvp {
+    background: url(../images/navigation/arrow.svg) no-repeat right center transparent;
     font-family: "Amatic SC", Helvetica Neue, Helvetica, Arial, sans-serif;
     float: right;
     font-size: 2.4rem;
     font-weight: bold;
-    line-height: 2.4rem; }
+    line-height: 2.4rem;
+    padding-right: 2rem; }
 
 .mobile-navigation-wrap {
   background-image: url("../images/navigation/heading.svg"), url("../images/hessian.png");
