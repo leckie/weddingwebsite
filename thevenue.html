@@ -86,6 +86,7 @@
             var map = L.mapbox.map('map', 'chrisleckie.lchfne9h')
                 .setView([56.3320756346906, -2.75447845458984], 13);
             map.dragging.disable();
+            map.scrollWheelZoom.disable();
             if (map.tap) map.tap.disable();
           </script>
         </div>
