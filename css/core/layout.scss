@@ -22,9 +22,11 @@ body {
   height: 100%;
 }
 .content-wrap {
+  background: url(../images/stamp.svg) no-repeat bottom 1.5rem center transparent;
   margin: 0 auto;
   max-width: 1060px;
   padding: $m-outer;
+  padding-bottom: 9rem;
 }
 .vertical-flex {
   @include display(flex);
@@ -33,6 +35,7 @@ body {
 @media screen and (min-width: $break-regular)  {
   .content-wrap {
     padding: $d-outer;
+    padding-bottom: 9rem;
   }
 }
 .paper-box {
