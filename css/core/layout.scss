@@ -475,13 +475,22 @@ body {
 
 // Wedding party only
 
-@media screen and (min-width: $break-regular)  {
-  .wedding-party {
-    max-width: 1560px;
-    .party-member {
-      padding: 0 1.5rem;
-      width: 33.33333333333333%;
-    }
+.wedding-party {
+  max-width: 1560px;
+}
+.wedding-party-wrap {
+  @include flex-wrap(wrap);
+}
+@media screen and (max-width: $break-large) and (min-width: $break-regular)  {
+  .wedding-party-wrap .party-member {
+    padding: 0 1.5rem;
+    width: 50%;
+  }
+}
+@media screen and (min-width: $break-large)  {
+  .wedding-party-wrap .party-member {
+    padding: 0 1.5rem;
+    width: 33.33333333333333%;
   }
 }
 
