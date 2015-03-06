@@ -353,7 +353,7 @@ body {
     position: relative;
     width: 50%; } }
 .intro-image-wrap {
-  background: url(../images/backdrops/beach.jpg) no-repeat right bottom/cover transparent;
+  background: url(../images/backdrops/woods.jpg) no-repeat center bottom/cover transparent;
   box-shadow: inset 0px -1px 4px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.5);
   height: 100%;
   position: relative;
@@ -366,8 +366,8 @@ body {
     right: 0;
     top: 0;
     background-color: transparent;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent); }
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.9), transparent);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), transparent); }
   .intro-image-wrap.wedding-party-image {
     background: url(../images/backdrops/close.jpg) no-repeat right center/cover transparent; }
   .intro-image-wrap.the-venue-image {
@@ -375,7 +375,7 @@ body {
   .intro-image-wrap.helpful-info-image {
     background: url(../images/backdrops/look-2.jpg) no-repeat right center/cover transparent; }
   .intro-image-wrap.giftlist-image {
-    background: url(../images/backdrops/woods-2.jpg) no-repeat center bottom/cover transparent; }
+    background: url(../images/backdrops/beach.jpg) no-repeat center bottom/cover transparent; }
   @media screen and (min-width: 1160px) {
     .intro-image-wrap.giftlist-image {
       background-position: center bottom -100px; } }
