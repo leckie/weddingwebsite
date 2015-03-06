@@ -376,6 +376,9 @@ body {
     background: url(../images/backdrops/look-2.jpg) no-repeat right center/cover transparent; }
   .intro-image-wrap.giftlist-image {
     background: url(../images/backdrops/woods-2.jpg) no-repeat center bottom/cover transparent; }
+  @media screen and (min-width: 1160px) {
+    .intro-image-wrap.giftlist-image {
+      background-position: center bottom -100px; } }
   .intro-image-wrap .intro-image {
     position: relative;
     width: 80%;

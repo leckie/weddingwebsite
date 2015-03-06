@@ -188,6 +188,11 @@ body {
   &.giftlist-image {
     background: url(../images/backdrops/woods-2.jpg) no-repeat center bottom / cover transparent;
   }
+  @media screen and (min-width: 1160px)  {
+    &.giftlist-image {
+      background-position: center bottom -100px;
+    }
+  }
   .intro-image {
     position: relative;
     width: 80%;
