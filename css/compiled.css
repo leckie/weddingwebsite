@@ -368,6 +368,14 @@ body {
     background-color: transparent;
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), transparent);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent); }
+  .intro-image-wrap.wedding-party-image {
+    background: url(../images/backdrops/close.jpg) no-repeat right center/cover transparent; }
+  .intro-image-wrap.the-venue-image {
+    background: url(../images/backdrops/look.jpg) no-repeat right center/cover transparent; }
+  .intro-image-wrap.helpful-info-image {
+    background: url(../images/backdrops/look-2.jpg) no-repeat right center/cover transparent; }
+  .intro-image-wrap.giftlist-image {
+    background: url(../images/backdrops/woods-2.jpg) no-repeat center bottom/cover transparent; }
   .intro-image-wrap .intro-image {
     position: relative;
     width: 80%;
@@ -395,6 +403,10 @@ body {
       max-width: 350px; }
     .intro-image-wrap.sub-page .arrow {
       display: none; }
+    .intro-image-wrap.sub-page:after {
+      background-color: transparent;
+      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), transparent);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), transparent); }
   @media screen and (min-width: 770px) {
     .intro-image-wrap.sub-page .intro-image {
       margin-top: 5rem; } }

@@ -176,6 +176,18 @@ body {
     top: 0;
     @include linear-gradient(rgba(0,0,0,.5), transparent, $fallback: transparent);
   }
+  &.wedding-party-image {
+    background: url(../images/backdrops/close.jpg) no-repeat right center / cover transparent;
+  }
+  &.the-venue-image {
+    background: url(../images/backdrops/look.jpg) no-repeat right center / cover transparent;
+  }
+  &.helpful-info-image {
+    background: url(../images/backdrops/look-2.jpg) no-repeat right center / cover transparent;
+  }
+  &.giftlist-image {
+    background: url(../images/backdrops/woods-2.jpg) no-repeat center bottom / cover transparent;
+  }
   .intro-image {
     position: relative;
     width: 80%;
@@ -206,6 +218,9 @@ body {
     }
     .arrow {
       display: none;
+    }
+    &:after {
+      @include linear-gradient(rgba(0,0,0,.8), transparent, $fallback: transparent);
     }
   }
   @media screen and (min-width: $break-regular)  {
