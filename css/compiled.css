@@ -223,7 +223,7 @@ body {
   flex-direction: column;
   -ms-flex-direction: column; }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   .content-wrap {
     padding: 3rem;
     padding-bottom: 9rem; } }
@@ -254,7 +254,7 @@ body {
   .paper-box.align-left {
     text-align: left; }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   .paper-box {
     padding: 2rem; }
     .paper-box.small-padding {
@@ -333,7 +333,7 @@ body {
       bottom: .8rem;
       left: .8rem; }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   .flex-wrap {
     display: -webkit-box;
     display: -moz-box;
@@ -385,7 +385,7 @@ body {
     margin-top: 90px;
     max-width: 450px;
     z-index: 5; }
-  @media screen and (min-width: 770px) {
+  @media screen and (min-width: 768px) {
     .intro-image-wrap .intro-image {
       margin-top: 50px; } }
   .intro-image-wrap .arrow {
@@ -410,11 +410,11 @@ body {
       background-color: transparent;
       background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), transparent);
       background-image: linear-gradient(rgba(0, 0, 0, 0.8), transparent); }
-  @media screen and (min-width: 770px) {
+  @media screen and (min-width: 768px) {
     .intro-image-wrap.sub-page .intro-image {
       margin-top: 5rem; } }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   .intro-image-wrap {
     box-shadow: none; } }
 .navigation-wrap {
@@ -465,7 +465,7 @@ body {
   .navigation-wrap.sub-page {
     margin: -4.4rem 3rem 0 3rem; }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   .navigation-wrap {
     display: block; } }
 .mobile-nav-bar {
@@ -559,7 +559,7 @@ body {
       font-family: "Amatic SC", Helvetica Neue, Helvetica, Arial, sans-serif;
       padding: .5rem 0; }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   .mobile-nav-bar,
   .mobile-navigation-wrap {
     display: none; } }
@@ -603,7 +603,7 @@ body {
   line-height: 2rem;
   margin-bottom: 2rem; }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   .sub-page-title {
     padding-top: 2rem;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.6); }
@@ -637,7 +637,7 @@ body {
     height: .7rem;
     margin: 1.5rem 0; }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   .engrave {
     background: url(../images/homepage/engrave.svg) no-repeat center center transparent;
     margin-bottom: 3rem;
@@ -648,7 +648,7 @@ body {
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1; } }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   .wedding-party {
     max-width: 1560px; }
     .wedding-party .party-member {
