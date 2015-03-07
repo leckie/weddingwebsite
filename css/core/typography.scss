@@ -38,6 +38,13 @@ h4 {
 a {
   color: $link-colour;
   text-decoration: none;
+  &:hover {
+    color: darken($link-colour, 10%);
+  }
+  &.arrow-anchor {
+    background: url(../images/navigation/arrow.svg) no-repeat right center / 12px transparent;
+    padding-right: 1.5rem;
+  }
 }
 .highlight-title {
   margin-bottom: 1.3rem;

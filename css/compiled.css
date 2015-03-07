@@ -109,6 +109,11 @@ h4 {
 a {
   color: #8462a3;
   text-decoration: none; }
+  a:hover {
+    color: #6a4e84; }
+  a.arrow-anchor {
+    background: url(../images/navigation/arrow.svg) no-repeat right center/12px transparent;
+    padding-right: 1.5rem; }
 
 .highlight-title {
   margin-bottom: 1.3rem;
@@ -676,5 +681,71 @@ body {
 
 .leaflet-control-attribution {
   display: none; }
+
+.hotel-list {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.hotel-picture {
+  background: none;
+  box-shadow: none;
+  padding: .2rem; }
+  .hotel-picture .tape.top-left {
+    left: 0;
+    top: 0; }
+  .hotel-picture .tape.top-right {
+    right: 0;
+    top: 0; }
+  .hotel-picture .tape.bottom-right {
+    bottom: 0;
+    right: 0; }
+  .hotel-picture .tape.bottom-left {
+    bottom: 0;
+    left: 0; }
+
+.hotel-details .hotel-name {
+  font-size: 2.4rem;
+  margin-bottom: .5rem; }
+.hotel-details .hotel-distance {
+  background: url(../images/hotels/location.svg) no-repeat left center transparent;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-left: 1.6rem; }
+.hotel-details .hotel-description {
+  line-height: 1.4; }
+
+@media screen and (min-width: 768px) {
+  .hotel-block {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
+
+  .hotel-list li {
+    width: 50%; }
+
+  .hotel-picture {
+    margin-bottom: 0;
+    width: 40%; }
+
+  .hotel-details {
+    padding-left: 1.5rem;
+    width: 60%; }
+
+  .hotel-description {
+    font-size: 1.3rem;
+    margin-bottom: .5rem; } }
 
 /*# sourceMappingURL=compiled.css.map */

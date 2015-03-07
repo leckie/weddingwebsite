@@ -502,3 +502,69 @@ body {
 .leaflet-control-attribution {
   display: none;
 }
+
+// Helpful info only
+
+.hotel-list {
+  @include flex-wrap(wrap);
+}
+.hotel-picture {
+  background: none;
+  box-shadow: none;
+  padding: .2rem;
+  .tape {
+    &.top-left {
+      left: 0;
+      top: 0;
+    }
+    &.top-right {
+      right: 0;
+      top: 0;
+    }
+    &.bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+    &.bottom-left {
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+.hotel-details {
+  .hotel-name {
+    font-size: $beta;
+    margin-bottom: .5rem;
+  }
+  .hotel-distance {
+    background: url(../images/hotels/location.svg) no-repeat left center transparent;
+    display: block;
+    font-size: $epsilon;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-left: 1.6rem;
+  }
+  .hotel-description {
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: $break-regular)  {
+  .hotel-block {
+    @include align-items(center);
+  }
+  .hotel-list li {
+    width: 50%;
+  }
+  .hotel-picture {
+    margin-bottom: 0;
+    width: 40%;
+  }
+  .hotel-details {
+    padding-left: 1.5rem;
+    width: 60%;
+  }
+  .hotel-description {
+    font-size: $epsilon;
+    margin-bottom: .5rem;
+  }
+}
