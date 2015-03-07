@@ -711,10 +711,13 @@ body {
   border: 0;
   border-radius: 0 3px 3px 0;
   color: #fff;
+  cursor: pointer;
   font-family: "proxima-nova-soft", Helvetica, Arial, sans-serif;
   font-size: 1.3rem;
   margin: 0;
   padding: 0 2rem; }
+  .direction-button:hover {
+    background: #6a4e84; }
 
 .hotel-list {
   -webkit-box-lines: multiple;

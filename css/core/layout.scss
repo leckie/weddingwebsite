@@ -518,14 +518,18 @@ body {
   @include flex-grow(1);
 }
 .direction-button {
-  background: $purple-colour;
+  background: $link-colour;
   border: 0;
   border-radius: 0 3px 3px 0;
   color: #fff;
+  cursor: pointer;
   font-family: $body-font;
   font-size: $epsilon;
   margin: 0;
   padding: 0 2rem;
+  &:hover {
+    background: darken($link-colour, 10%);
+  }
 }
 
 // Helpful info only
