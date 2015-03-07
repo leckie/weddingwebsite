@@ -759,6 +759,9 @@ body {
   line-height: 1.4; }
 
 @media screen and (min-width: 768px) {
+  .local-details-wrap {
+    padding: 0 1.5rem; }
+
   .hotel-block {
     -webkit-box-align: center;
     -moz-box-align: center;
@@ -770,7 +773,8 @@ body {
     align-items: center;
     -ms-flex-align: center; }
 
-  .hotel-list li {
+  .hotel-item {
+    padding: 0 1.5rem;
     width: 50%; }
 
   .hotel-picture {

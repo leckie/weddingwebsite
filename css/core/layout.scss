@@ -578,10 +578,14 @@ body {
   }
 }
 @media screen and (min-width: $break-regular)  {
+  .local-details-wrap {
+    padding: 0 1.5rem;
+  }
   .hotel-block {
     @include align-items(center);
   }
-  .hotel-list li {
+  .hotel-item {
+    padding: 0 1.5rem;
     width: 50%;
   }
   .hotel-picture {
