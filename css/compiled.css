@@ -338,6 +338,15 @@ body {
       bottom: .8rem;
       left: .8rem; }
 
+.mobile-flex-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 @media screen and (min-width: 768px) {
   .flex-wrap {
     display: -webkit-box;
@@ -681,6 +690,31 @@ body {
 
 .leaflet-control-attribution {
   display: none; }
+
+.direction-form {
+  margin-bottom: 1.5rem; }
+
+.direction-input {
+  border: 1px solid #b8b7b5;
+  border-radius: 3px 0 0 3px;
+  border-right: 0;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 1rem;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1; }
+
+.direction-button {
+  background: #8462a3;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  color: #fff;
+  font-family: "proxima-nova-soft", Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0 2rem; }
 
 .hotel-list {
   -webkit-box-lines: multiple;

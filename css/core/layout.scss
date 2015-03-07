@@ -146,6 +146,9 @@ body {
     }
   }
 }
+.mobile-flex-wrap {
+  @include display(flex);
+}
 @media screen and (min-width: $break-regular)  {
   .flex-wrap {
     @include display(flex);
@@ -501,6 +504,28 @@ body {
 }
 .leaflet-control-attribution {
   display: none;
+}
+.direction-form {
+  margin-bottom: 1.5rem;
+}
+.direction-input {
+  border: 1px solid $border-colour;
+  border-radius: 3px 0 0 3px;
+  border-right: 0;
+  font-size: $epsilon;
+  margin: 0;
+  padding: 1rem;
+  @include flex-grow(1);
+}
+.direction-button {
+  background: $purple-colour;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  color: #fff;
+  font-family: $body-font;
+  font-size: $epsilon;
+  margin: 0;
+  padding: 0 2rem;
 }
 
 // Helpful info only
