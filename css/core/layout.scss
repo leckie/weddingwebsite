@@ -577,7 +577,32 @@ body {
     line-height: 1.4;
   }
 }
+.taxi-title {
+  font-size: $beta;
+}
+.taxi-listing {
+  border-bottom: 1px solid $border-colour;
+  padding: 1rem 0;
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+.taxi-list .name,
+.taxi-list .number {
+  width: 50%;
+}
+.taxi-list .number {
+  text-align: right;
+}
 @media screen and (min-width: $break-regular)  {
+  .helpful-info-details .detail-breakdown {
+    display: block;
+    width: 50%;
+  }
+  .helpful-info-details .taxi-numbers {
+    padding-left: 3.8rem;
+    width: 50%;
+  }
   .local-details-wrap {
     padding: 0 1.5rem;
   }
